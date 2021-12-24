@@ -8,6 +8,10 @@
 
 function saludar(nombre){
     console.log('Hola ' + nombre);
+    return [1,2];
+    //Este codigo nunca será ejecutado
+    console.log('Soy un codigo despues de un return');
+
 }
 
 /*  Función Anónima
@@ -25,7 +29,8 @@ const saludarFlecha = () => {
 
 /*  Funciones flecha con argumentos.
     Los paréntesis son opcionales, cuando se manda un solo argumento
-    no es necesario poner la función de flecha.
+    no es necesario poner la función de flecha. Es buena practica poner 
+    los paréntesis.
  */
 const saludarFlecha2 = nombre => {
     console.log('Hola Flecha '+nombre);
@@ -33,10 +38,29 @@ const saludarFlecha2 = nombre => {
 
 /*  Llamada de una funcion
 */
-saludar( 'Sergio', 40, true, 'Costa Rica');
+const retornoSaludar = saludar( 'Sergio', 40, true, 'Costa Rica');
+console.log(retornoSaludar[0],retornoSaludar[1]);
+
+
+
+
 saludar2( 'Fernando' );
 
 saludarFlecha2('Melissa');
 
+
+function sumar(a,b){
+    return a+b;
+}
+
+const sumar2 = (a,b) => a+b ;
+
+function getAleatorio(){
+    return Math.random();
+}
+
+const getAleatorio2 = () => Math.random();
+
+console.log( getAleatorio2() );
 
 
